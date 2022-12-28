@@ -190,54 +190,35 @@ h3{
 }
 
 .inlogmenu form{
+    display: flex;
+    flex-direction: column;
     padding: 0 40px;
     box-sizing: border-box;
 }
 form .tekstvak{
     position: relative;
-    border-bottom: 2px solid black;
     margin: 30px 0;
-    background: white;
+    background: #1d1d1d;
 }
 
 .tekstvak input{
+    display:block;
+    background: white;
     width: 100%;
     padding: 0 5px;
     height: 40px;
     font-size: 16px;
     border: none;
-    background: none;
     outline: none;
 }
 
 .tekstvak label{
-    position: absolute;
-    top: 50%;
+    display:block;
+    position: relative;
     left: 5px;
-    color: black;
-    transform: translateY(-50%);
+    color: white;
     font-size: 16px;
     pointer-events: none;
-    transition: .5s;
-  }
-.tekstvak span::before{
-    content: '';
-    position: absolute;
-    top: 40px;
-    left: 0;
-    width: 0%;
-    height: 2px;
-    background: red;
-    transition: .5s;
-}
-.tekstvak input:focus ~ label,
-.tekstvak input:valid ~ label{
-    top: -10px;
-    color: white;
-  }
-.tekstvak input:focus ~ span::before,
-.tekstvak input:valid ~ span::before{
-    width: 100%;
   }
 
 .wwvergeten{

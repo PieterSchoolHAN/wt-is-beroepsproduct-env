@@ -22,15 +22,20 @@ session_start();
         <section class="inlogmenu">
             <h1>Inloggen</h1>
             <form method="post" action="index.php">
+
                 <div class="tekstvak">
-                    <input type="email" required>
+                    <label for="name">E-mailadres</label>
                     <span></span>
-                    <label>E-mailadres</label>
+                    <input id="email" type="email" name="email" value="" required>
+                   
+                    
                 </div>
                 <div class="tekstvak">
-                    <input type="password" required>
-                    <span></span>
                     <label>Wachtwoord</label>
+                    <span></span>
+                    <input id="password" type="password" name="password" value="" required>
+                    
+                    
                 </div>
                 <div class="wwvergeten">Wachtwoord vergeten?</div>
                 <input type="submit" value="Inloggen">
