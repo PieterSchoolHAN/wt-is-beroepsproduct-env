@@ -1,0 +1,185 @@
+:root {
+    --achtergrondkleur: #141414;
+    --accentkleur: black;
+    --tekstkleur: white;
+}
+
+header {    
+    background-color: var(--achtergrondkleur);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: var(--tekstkleur);
+    display: flex;
+    padding: 15px 30px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main {
+    padding: 15px 30px;
+}
+
+body {
+    background-color: var(--achtergrondkleur);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: var(--tekstkleur);
+}
+
+footer{
+    background-color: var(--achtergrondkleur);
+    color: var(--tekstkleur);
+    opacity: 100%;
+    padding: 5px;
+    position:relative;
+    bottom: 0;
+  width: 100%;
+}
+
+.movie-list
+{
+display: flex;
+align-items: center;
+justify-content: space-evenly;
+flex-wrap: wrap;
+}
+
+.movie-list-item{
+    max-width: 200px;
+}
+
+.movie-list-item img
+{
+    height: 300px;
+}
+
+
+.text-left{
+    text-align: left;
+}
+
+.text-right{
+    text-align: right;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.div-flex{
+    display: flex;
+    float: left;
+}
+
+.center-div{
+    margin: 0 auto;
+    width: fit-content;
+}
+
+.margin-left{
+margin-left: 30px;
+}
+
+.mt-text{
+    margin-top: 20px;
+}
+
+.mt-100{
+    margin-top: 100px;
+}
+
+.mt-250{
+    margin-top: 250px;
+}
+
+.mt-500{
+    margin-top: 500px;
+}
+
+.login-button{
+    max-width: 80px;
+    text-align: center;
+    background-color: var(--achtergrondkleur);
+    color: var(--tekstkleur);
+    border: none;
+    font-size: 15px;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.button
+{
+    max-width: 80px;
+    text-align: center;
+    background-color: #ff0000;
+    color: var(--tekstkleur);
+    border: none;
+    font-size: 15px;
+    padding: 5px;
+    list-style-type: none;
+}
+
+.zoom {
+    padding: 50px;
+    transition: transform .2s;
+    margin: 0 auto;
+  }
+  
+  .zoom:hover {
+    transform: scale(1.2);
+  }
+
+.searchbar
+{
+    font-size: 80%;
+}
+.push {
+    margin-left: auto;
+}
+
+.list-bullets{
+    list-style-type: none;
+}
+
+.mw-200{
+    max-width: 200px;
+}
+
+.flex-filmpagina {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .flex-filmpagina > .film-content {
+    max-width: 500px;
+    padding-left: 10px;
+  }
+
+  .flex-zoekpage{
+     display: flex; 
+     margin: 0 auto;
+  }
+
+  .float-left{
+      float: left;
+  }
+
+  form label {
+      display: block;
+  }
+
+.no-decoration a, .no-decoration{
+    text-decoration: none;
+    color: var(--tekstkleur)
+}
+
+.no-decoration a:visited{
+    color: var(--tekstkleur)
+}
+
+.no-decoration a:hover{
+    color: rgb(194, 194, 194);
+}
+
+.no-decoration a:active{
+    color: var(--tekstkleur)
+}

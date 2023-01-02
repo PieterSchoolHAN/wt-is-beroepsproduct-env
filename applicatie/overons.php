@@ -1,38 +1,61 @@
-<?php
-
-include_once 'applicatielaag/algemeneFuncties.php';
- 
-session_start();
-//uitloggen();   
-//gebruikerVerwijderen();
-?>
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/stijlen.css">
-    <title>Over ons</title>
+  <link rel="shortcut icon" type="image/jpg" href="images/favicon.png" />
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="mystyle.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Over ons - Fletnix</title>
 </head>
+
 <body>
-    <?php echo genereerHeader(); ?>
-    <main>
-        <section>
-            <h1>Over ons</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum pharetra cursus orci aliquam condimentum. In hac habitasse platea dictumst. Sed congue dignissim commodo. In ornare sit amet tortor vel volutpat. Aenean condimentum ligula ut dictum mollis. Suspendisse potenti. Sed luctus euismod arcu sit amet ornare. Phasellus fermentum urna quis feugiat aliquet. Nulla volutpat risus tempor mi ullamcorper scelerisque. Nulla eu tincidunt odio, et faucibus nisl. Morbi tempus ipsum imperdiet leo ultricies semper. Pellentesque scelerisque nunc tellus, ac fringilla nisl interdum id. Proin sed pharetra tellus.</p>
-        </section>
-        <section>
-            <h2>Contact</h2>
-            <ul class="contactgegevens">
-                <li>E-mail: info@fletnix.com </li>
-                <li>Tel: 088-1234567 </li>
-                <li>Adres: Adres 123 1234AB Plaatsnaam</li>
-            </ul>
-        </section>
-    </main>
-    <?php echo genereerFooter(); ?> 
+<?php require_once "includes/header.php";
+  ?>
+
+  <main>
+    <div>
+      <h1 class="text-center">Over ons:</h1>
+      <p class="text-center">
+        Fletnix is een streamingdienst gemaakt voor studenten, waar iedereen voor een nette prijs films en series kan
+        kijken. Met een grote selectie aan films speciaal geselecteerd voor studenten is er altijd wel wat leuks op de
+        website te vinden.
+        Er zijn 3 verschillende abbonementen beschikbaar: Basic, Premium en Pro. Bekijk hieronder de prijzen en de
+        specificaties voor elk abonnementstype.
+      </p>
+      <h2 class="text-center mt-100">Basic: Onbeperkt films en series bekijken op 1 apparaat.
+        Kwaliteit: 1080p full HD.
+      </h2>
+      <h3 class="text-center">
+        9,99 per maand.
+      </h3>
+      <h2 class="text-center">
+        Premium (Meest gekozen!): Onbeperkt films en series kijken op 3 apparaten.
+        Kwaliteit: 1080p full HD.
+      </h2>
+      <h3 class="text-center">
+        11,99 per maand.
+      </h3>
+      <h2 class="text-center">
+        Pro: Onbeperkt films en series kijken op 4 apparaten.
+        Kwaliteit: 4K Ultra HD.
+      </h2>
+      <h3 class="text-center">
+        13,99 per maand.
+      </h3>
+
+      <div class="center-div text-center">
+        <h1>Interesse?</h1>
+        <form action="registreren.php" class="center-div">
+          <input class="login-button" type="submit" value="Registreer">
+        </form>
+      </div>
+
+    </div>
+  </main>
+  <?php 
+require_once "includes/footer.php"
+?>
 </body>
-</html>
