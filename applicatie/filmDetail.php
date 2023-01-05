@@ -21,9 +21,6 @@ require_once "includes/haalFilmOp.php";
   ?>
   <main>
     <div>
-      <?php if(isset($_SESSION['admin']) == 1)
-      echo '<div class="text-center"><a class="login-button no-decoration" href="filmAanpassen.php?filmCode='.$filmCode.'">Pas film aan</a></div>';
-?>
       <h1><?php echo $film["Titel"]; ?></h1>
       <div>
         <div class="flex-filmpagina">

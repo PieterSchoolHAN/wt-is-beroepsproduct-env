@@ -380,5 +380,3 @@ GO
 ALTER TABLE [dbo].[Watchhistory] CHECK CONSTRAINT [FK4_movie_id]
 GO
 
--- Username: admin, Password: 'password
-INSERT [dbo].[Customer] VALUES ('admin@fletnix.nl', 1, 'Flexton', 'Ned', 'Mastercard', '0000', 'Pro', GETDATE(), NULL, 'admin', '$2y$10$NoURLmRZake24ufeILYYMuxtmay/tAbE/iCIov7ESLsk3hHrHgZ4i', N'Nederland', 'x', GETDATE())

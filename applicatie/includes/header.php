@@ -30,7 +30,7 @@
     if (isset($_SESSION['gebruiker'])) {
       echo '<div >Welkom, ' . $_SESSION['gebruiker'] . '!</div><div class="mt-text"><a class="button" href="includes/logout.php">Uitloggen</a></div>';
     } else {
-      echo '<div><a class="button" href="login.php">Inloggen/Registreren</a></div>';
+      echo '<div><a class="button" href="login.php">Inloggen</a></div>';
     }
     ?>
     <div class="no-decoration">
