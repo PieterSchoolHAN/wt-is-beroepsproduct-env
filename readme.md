@@ -2,7 +2,7 @@
 
 Deze omgeving maakt een database server en een web server aan gebaseerd
 op [Docker](https://www.docker.com/). Bij het opstarten van de omgeving
-wordt automatisch een aantal databases aangemaakt en gevuld met
+wordt automatisch de database *Fletnix* aangemaakt en gevuld met
 voorbeelddata.
 
 ***Let op, deze omgeving is specifiek bedoeld als educatieve omgeving.
@@ -11,10 +11,7 @@ hiervoor zullen eerst nog een groot aantal beveilingsaspecten opgelost
 moeten worden (wachtwoorden zijn eenvoudig te achterhalen, er wordt
 gebruik gemaakt van de [Built-in web
 server](https://www.php.net/manual/en/features.commandline.webserver.php),
-er is altijd een debugger actief etc. etc.).***
-
->❗Mocht je op een ARM machine zitten (zoals de nieuwe M1-chips van Apple)
-> dan moet je een aantal dingen wijzigen in de setup. Zie [ARM ondersteuning](#arm-ondersteuning)
+etc. etc.).***
 
 ## Benodigde software
 
@@ -58,7 +55,7 @@ niet het geval is, kies in het menu van Visual Studio Code onder
 Type in de terminal `docker compose up` en daarna *enter*.
 
 Nu worden een database server en een web server aangemaakt. Daarna
-worden beide servers opgestart en de databases worden
+worden beide servers opgestart en de *Fletnix* database wordt
 automatisch aangemaakt en gevuld. Tijdens dit proces zie je een
 behoorlijk aantal meldingen voorbij komen.
 
@@ -73,7 +70,6 @@ Uiteindelijk moet de volgende melding in beeld verschijnen
     -------------------------------------------------------
      Available databases:                                 -
     - movies
-    - GelreAirport
     - muziekschool
 
      webserver starting
@@ -89,7 +85,7 @@ Test de webserver:
 -   *It works!*: <http://localhost:8080> of
     <http://localhost:8080/index.php>
 -   *phpinfo*: <http://localhost:8080/phpinfo.php>
--   *Data uit de database*: <http://localhost:8080/componist-aantalstukken.php>
+-   *Data uit de database*: <http://localhost:8080/moviegenres.php>
 
 ## Je eigen bestanden
 
@@ -111,7 +107,7 @@ echo ('Hallo **je eigen naam**');
 Roep de `test.php` in je webbrowser (op de localhost:8080). Als het goed
 is zie je de melding *Hallo, \*\*je eigen naam\*\** verschijnen.
 
-### Beroepsproduct applicatie
+### Fletnix applicatie
 
 Kopieer al je HTML-bestanden naar de map `./applicatie/` en verander van
 elke bestand de extensie naar `.php`. Roep als test alle bestanden aan
@@ -119,7 +115,7 @@ via je browser. Maak nu je web-applicatie zodanig dat deze optimaal van
 opzet is en dat de gegevens in de site uit de database gehaald worden.
 Zie de lesstof hoe je dat allemaal doet.
 
-Tip: in het bestand [`componist-aantalstukken.php`](./applicatie/componist-aantalstukken.php) (in combinatie met
+Tip: in het bestand `moviegenres.php` (in combinatie met
 `db_connectie.php`) kun je een voorbeeld zien hoe je verbinding maakt
 met een database en gegevens in een webpagina plaatst.
 
@@ -195,53 +191,3 @@ het kopje
 [*Virtualization*](https://docs.docker.com/docker-for-windows/troubleshoot/#virtualization-must-be-enabled),
 alleen die onder de subkopjes *'VIRTUALIZATION MUST BE ENABLED'* en
 *'WSL 2 AND WINDOWS HOME'*.
-
-## ARM ondersteuning
-
-Op een machine die geen x86 architectuur heeft (zoals de M1-chips van Apple)
-moet je iets wijzigen in de file [docker-compose.yml](./docker-compose.yml).
-
-### Database server type aanpassen:
-
-Namelijk de `image` van de database_server:
-
-Waar nu staat:
-```yaml
-version: "3.8"
-services:
-  database_server:
-    image: mcr.microsoft.com/mssql/server
-    env_file:
-      - variables.env
-...
-```
-
-Vervang je de regel:
-
-`image: mcr.microsoft.com/mssql/server` naar -> `image: mcr.microsoft.com/azure-sql-edge`
-
-Probeer nu opnieuw `docker-compose up` vanuit je terminal te draaien.
-
-## Debugging (foutopsporing) van je code
-
-Met een [debugger](https://en.wikipedia.org/wiki/Debugging) is het
-mogelijk om stapsgewijs door je code heen te lopen om zo fouten op te
-kunnen sporen. Het is een handig hulpmiddel om te bekijken wat de code
-nu precies doet. Deze omgeving is zo ingericht dat er ee n debugger
-actief is, je hebt alleen een extra extensie nodig. De [PHP
-Debug](https://marketplace.visualstudio.com/items?itemName=felixfbecker.php-debug)
-van Felix Becker dien je te installeren.
-
-### Installatie debugger
-
-Open aan de linkerkant van Visual Studio Code de extensions en zoek op *felixfbecker.php-debug*. Klik op install en wacht tot deze debugger is geïnstalleerd. Bij het opstarten 
-
-![Installatie PHP Debug](readme-images/vscode-extention-php-debug.png)
-
-### How to debug
-
-Hieronder twee filmpjes die aangeven hoe je een PHP-pagina kunt debuggen.
-
-![debugging part 1](readme-images/how-to-debug-part-1.gif)
-
-![debugging part 1](readme-images/how-to-debug-part-2.gif)

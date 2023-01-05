@@ -1,0 +1,181 @@
+body, a {
+    background-color: black;
+    color: white;
+    font-family: sans-serif;
+}
+
+button {
+    cursor: pointer;
+    color: black;
+}
+
+h1 {
+    font-size: 300%;
+    /* display: flex; */
+    width: fit-content;
+}
+
+h1 a {
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 100px;
+}
+
+nav a { 
+    text-decoration: none;
+}
+
+
+nav div button:hover {
+    background: #C3C3C3;
+    border-color: #C3C3C3;
+}
+
+table {
+    text-align: left;
+}
+
+.logincontainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 50px;
+}
+
+.logincontainer form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: fit-content;
+}
+
+.logincontainer form p {
+    margin: 0px;
+}
+
+.maincontainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.grid {
+    display: grid;
+    width: 100%;
+    grid-template-columns: auto auto auto;
+    grid-gap: 20px;
+    margin: 20px;
+    justify-content: space-evenly;
+}
+
+.media {
+    display: flex;
+    flex-direction: column;
+}
+
+.media a {
+    font-size: small;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px;
+}
+
+.media img {
+    width: 288px;
+    height: 162px;
+    border-radius: 5%;
+}
+
+.media:hover .trailer {
+    display: block;
+    position: absolute;
+}
+
+iframe {
+    border: none;
+    width: 288px;
+    height: 162px;
+}
+
+.trailer {
+    display: none;
+}
+
+.dropdown-button {
+    width: fit-content;
+    height: fit-content;
+    background-color: #BF0000;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5%;
+    transition: background-color .5s;
+    color: white;
+}
+
+.dropdown {
+    margin: 20px;
+    height: fit-content;
+}
+
+.dropdown-content {
+    display: none;
+}
+
+.dropdown-content a {
+    background-color: #6E6E6E;
+    padding: 16px;
+    font-size: 16px;
+    text-decoration: none;
+    display: block;
+    border: none;
+    transition: background-color .5s;
+}
+
+.verwijderfilter {
+    transition: background-color .5s;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    animation-name: fade;
+    animation-duration: .5s;
+}
+
+.dropdown:hover .dropdown-button {
+    background-color: #650000;
+}
+
+.dropdown-content a:hover {
+    background-color:#303030;
+}
+
+.dropdown-content .verwijderfilter {
+    background-color: #BF0000;
+}
+
+.dropdown-content .verwijderfilter:hover {
+    background-color: #650000;
+}
+
+@keyframes fade {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.beheercontainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.filmaanpassen form, .filmtoevoegen form, .filminfo form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: fit-content;
+}
+
